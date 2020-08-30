@@ -1,0 +1,135 @@
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development
+$ git clone https://github.com/KameshwarChembrolu/Interview_Stack.git
+Cloning into 'Interview_Stack'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 11 (delta 2), reused 8 (delta 1), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development
+$ cd Interview_Stack/
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/qualcomm
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (master)
+$ git checkout qualcomm
+Switched to a new branch 'qualcomm'
+Branch 'qualcomm' set up to track remote branch 'qualcomm' from 'origin'.
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git branch -a
+  master
+* qualcomm
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/qualcomm
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
+
+    -d                    only show trees
+    -r                    recurse into subtrees
+    -t                    show trees when recursing
+    -z                    terminate entries with NUL byte
+    -l, --long            include object size
+    --name-only           list only filenames
+    --name-status         list only filenames
+    --full-name           use full path names
+    --full-tree           list entire tree; not just current directory (implies --full-name)
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
+
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only qualcomm                                                                                      Interview_Questions_Non_Programming.txt
+New Text Document.txt
+README.md
+programming_questions_interview.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only master
+README.md
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ cat l.txt
+cat: l.txt: No such file or directory
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only qualcomm
+Interview_Questions_Non_Programming.txt
+New Text Document.txt
+README.md
+programming_questions_interview.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git pull origin qualcomm
+From https://github.com/KameshwarChembrolu/Interview_Stack
+ * branch            qualcomm   -> FETCH_HEAD
+Already up to date.
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only qualcomm
+Interview_Questions_Non_Programming.txt
+New Text Document.txt
+README.md
+programming_questions_interview.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git add .
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only qualcomm
+Interview_Questions_Non_Programming.txt
+New Text Document.txt
+README.md
+programming_questions_interview.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git commit -m "removed a document"
+[qualcomm 148c7f8] removed a document
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 New Text Document.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git push origin qualcomm
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 231 bytes | 231.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KameshwarChembrolu/Interview_Stack.git
+   c9c22b0..148c7f8  qualcomm -> qualcomm
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git ls-tree --name-only qualcomm
+Interview_Questions_Non_Programming.txt
+README.md
+programming_questions_interview.txt
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ git commit -m "Let us see what happens"                                                                               On branch qualcomm
+Your branch is up to date with 'origin/qualcomm'.
+
+nothing to commit, working tree clean
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ ls -l
+total 13
+-rw-r--r-- 1 Kamesh 197121 4949 Aug 30 13:21 Interview_Questions_Non_Programming.txt
+-rw-r--r-- 1 Kamesh 197121 1696 Aug 30 13:21 programming_questions_interview.txt
+-rw-r--r-- 1 Kamesh 197121  109 Aug 30 13:21 README.md
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ dir
+Interview_Questions_Non_Programming.txt  programming_questions_interview.txt  README.md
+
+Kamesh@LAPTOP-F1U1E6MO MINGW64 ~/Desktop/Development/Interview_Stack (qualcomm)
+$ cd ..                                               
